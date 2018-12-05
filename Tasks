@@ -7,3 +7,19 @@ while True:
         break
 mynewhandle.close()
 
+Task2
+MonsterName = input("Please enter the name of the Monster: ")
+
+def Monster(file):
+    count = 0
+    MonsterFile = open(file, "r")
+    while True:
+        text = MonsterFile.readline()
+        if len(text) == 0:
+            break
+        if MonsterName in text.split(",")(1): #WRong with the line, Need to match name with first colum of database
+            print("Monster Found:",text)
+            count = 1
+    if count != 1:
+        print("Monster not found")
+Monster("monster.txt")
