@@ -1,0 +1,9 @@
+Task 1.2
+mynewhandle = open("monster.txt", "r")
+while True:
+    theline = mynewhandle.readline()
+    print(theline.split(",")[1])
+    if len(theline) == 0:
+        break
+mynewhandle.close()
+
