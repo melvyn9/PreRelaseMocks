@@ -23,3 +23,20 @@ def Monster(file):
     if count != 1:
         print("Monster not found")
 Monster("monster.txt")
+ OR
+ 
+ MonsterName = input("Please enter the name of the Monster: ")
+
+def Monster(file):
+    count = 0
+    MonsterFile = open(file, "r")
+    while True:
+        text = MonsterFile.readline()
+        if len(text) == 0:
+            break
+        if MonsterName in text:
+            print("Monster Found:",text)
+            count = 1
+    if count != 1:
+        print("Monster not found")
+Monster("monsterdatabase.txt")
